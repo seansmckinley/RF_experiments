@@ -14,6 +14,7 @@ invisible(if (file.exists("importance.csv")){
 })
 
 for (i in 1:25){
+    set.seed(250)
     test  <- iris[ c(1:10, 51:60, 101:110), ]  # removed the Species column here.
     permute <- c(sample(11:50), sample(61:100), sample(111:150))
     train <- iris[ permute,]
